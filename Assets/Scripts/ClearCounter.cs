@@ -6,14 +6,14 @@ public class ClearCounter : MonoBehaviour
 {
 
     [SerializeField]
-    private Transform tomatoPrefab;
+    private KitchenObjectSO kitchenObjectSO;
 
     [SerializeField]
     private Transform counterTop;
     public void Interact()
     {
         Debug.Log("Interact");
-        Transform tomatoTransform = Instantiate(tomatoPrefab, counterTop);
-        tomatoTransform.localPosition = Vector3.zero;
+        Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab, counterTop);
+        kitchenObjectTransform.localPosition = Vector3.zero;
     }
 }
