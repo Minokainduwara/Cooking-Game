@@ -161,8 +161,8 @@ public class Player : MonoBehaviour
         isWalking = moveDir != Vector3.zero;
 
         //Rotate the player into moving direction
-        float rotateSpeed = 10f;
-        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
+        //float rotateSpeed = 10f;
+        //transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
     }
 
     private void SetSelectedCounter(ClearCounter selectedCounter)
