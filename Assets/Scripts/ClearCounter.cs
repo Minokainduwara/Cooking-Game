@@ -42,4 +42,23 @@ public class ClearCounter : MonoBehaviour
         }
 
     }
+    public Transform GetKitchenObjectFollowTransform()
+    {
+        return counterTop;
+    }
+
+    public void SetKitchenObject (KitchenObject kitchenObject)
+    {
+        this.kitchenObject = kitchenObject;
+    }
+
+    public KitchenObject GetKitchenObject()
+    {
+        return kitchenObject;
+    }
+
+    public bool ClearKitchenObject()
+    {
+        return kitchenObject != null;
+    }
 }
