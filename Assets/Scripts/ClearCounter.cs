@@ -32,9 +32,8 @@ public class ClearCounter : MonoBehaviour
         {
             //Spawn Objects
             Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab, counterTop);
-            kitchenObjectTransform.localPosition = Vector3.zero;
-            kitchenObject = kitchenObjectTransform.GetComponent<KitchenObject>();
-            kitchenObject.SetclearCounter(this);
+            kitchenObjectTransform.GetComponent<KitchenObject>().SetclearCounter(this);
+            
         }
         else
         {
@@ -58,6 +57,11 @@ public class ClearCounter : MonoBehaviour
     }
 
     public bool ClearKitchenObject()
+    {
+        return kitchenObject != null;
+    }
+
+    public bool HasKitchenObject()
     {
         return kitchenObject != null;
     }

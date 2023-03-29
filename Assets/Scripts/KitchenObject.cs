@@ -19,6 +19,11 @@ public class KitchenObject : MonoBehaviour
             this.clearCounter.ClearKitchenObject();
         }
         this.clearCounter = clearCounter;
+
+        if (clearCounter.HasKitchenObject())
+        {
+            Debug.LogError("Counter already has a kitchen Object");
+        }
         clearCounter.SetKitchenObject(this);
 
         transform.parent = clearCounter.GetKitchenObjectFollowTransform();
